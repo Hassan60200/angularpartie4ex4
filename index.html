@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr" ng-app="testApp">
+<head>
+    <meta charset="utf-8">
+    <title>Exercice 3 angular partie 4</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</head><body ng-controller="cars">
+    <table cellspacing="2px" cellpadding="2px;" rules="all" style="border:solid 1px black;">
+        <thead>
+            <th>Marque</th>
+            <th>Couleur</th>
+        </thead>
+        <tr ng-repeat = "voiture in voitures | orderBy:'marque'" ng-if= "voiture.couleur != 'verte'">
+            <td>
+                {{voiture.marque}}
+
+            </td>
+            <td>
+                {{voiture.couleur}}
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
